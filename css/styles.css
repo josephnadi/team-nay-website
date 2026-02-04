@@ -125,6 +125,8 @@ h1, h2 {
     margin-bottom: 15px;
     color: #2c3e50;
 }
+
+#mission {
     background: white;
     padding: 2rem;
     border-radius: 8px;
@@ -247,12 +249,13 @@ textarea {
     transition: border-color 0.3s;
 }
 
+/* Form Elements */
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
 
 textarea {
@@ -261,7 +264,7 @@ textarea {
 }
 
 .error {
-    color: #d32f2f;
+    color: #e74c3c;
     font-size: 0.85em;
     margin-top: 5px;
     display: none;
@@ -269,7 +272,7 @@ textarea {
 
 input.invalid,
 textarea.invalid {
-    border-color: #d32f2f;
+    border-color: #e74c3c;
 }
 
 input.invalid ~ .error,
@@ -278,7 +281,7 @@ textarea.invalid ~ .error {
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #3498db;
     color: white;
     padding: 12px 30px;
     border: none;
@@ -291,11 +294,11 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #2980b9;
 }
 
 button[type="submit"]:active {
-    background-color: #3d8b40;
+    background-color: #1c638e;
 }
 
 .success-message {
@@ -315,18 +318,19 @@ button[type="submit"]:active {
 }
 
 .info-section {
-    background: #f9f9f9;
+    background: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .info-section h2 {
     font-size: 1.5em;
-    color: #333;
+    color: #2c3e50;
     margin-bottom: 20px;
-    border-bottom: 3px solid #4CAF50;
+    border-bottom: 3px solid #3498db;
     padding-bottom: 10px;
+    text-align: left;
 }
 
 .location-info {
@@ -336,10 +340,11 @@ button[type="submit"]:active {
 
 .location-info p {
     margin: 10px 0;
+    text-align: left;
 }
 
 .location-info strong {
-    color: #333;
+    color: #2c3e50;
 }
 
 .social-links {
@@ -354,7 +359,7 @@ button[type="submit"]:active {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: #4CAF50;
+    background-color: #3498db;
     color: white;
     border-radius: 50%;
     text-decoration: none;
@@ -363,8 +368,141 @@ button[type="submit"]:active {
 }
 
 .social-link:hover {
-    background-color: #45a049;
+    background-color: #2980b9;
     transform: translateY(-3px);
+}
+
+/* Services Page Styles */
+.services-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-radius: 0 0 50px 50px;
+}
+
+.services-header h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.services-header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.services-intro p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 500px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-image {
+    height: 200px;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.service-content {
+    padding: 30px;
+}
+
+.service-content h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.service-features li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.btn-learn-more, .btn-cta {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-learn-more:hover, .btn-cta:hover {
+    background-color: #2980b9;
+}
+
+.cta-section {
+    background: #2c3e50;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.cta-section h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
 }
 
 .social-link.facebook {
