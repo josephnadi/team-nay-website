@@ -141,7 +141,7 @@ h1, h2 {
 }
 
 /* Classy Cards & Grids */
-.classy-grid {
+.classy-grid, .values-grid, .services-grid, .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
@@ -166,6 +166,16 @@ h1, h2 {
     font-size: 3.5rem;
     margin-bottom: 25px;
     display: inline-block;
+}
+
+.value-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.value-item h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
 }
 
 /* Classy List Styles */
@@ -301,6 +311,8 @@ h1, h2 {
 #hero {
     /* Base hero styles inherited from #hero, .page-hero above */
 }
+
+.hero-cta {
     display: flex;
     justify-content: center;
     gap: 20px;
