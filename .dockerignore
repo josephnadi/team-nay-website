@@ -1,0 +1,10 @@
+.git
+.gitignore
+node_modules
+*.log
+temp
+Dockerfile
+.dockerignore
+README.md
+CONTRIBUTING.md
+LICENSE
